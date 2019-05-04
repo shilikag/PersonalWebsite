@@ -94,11 +94,41 @@
 		}
 
 		.header {
+
   			padding: 20px;
   			text-align: center;
   			background: lightgrey;
   			color: white;
   			font-size: 20px;
+  			position: relative;
+    		-webkit-animation-name: move; /* Safari 4.0 - 8.0 */
+  			-webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+  			-webkit-animation-iteration-count: 3; /* Safari 4.0 - 8.0 */
+  			animation-name: move;
+  			animation-duration: 2s;
+  			animation-iteration-count: infinite;
+  			animation-play-state: paused;
+		}
+		.header:hover {
+			animation-play-state: running;
+		}
+
+		/* Safari 4.0 - 8.0 */
+		@-webkit-keyframes move {
+ 			0%   {left:0px; top:0px;}
+  			25%  {left:200px; top:0px;}
+  			50%  {left:200px; top:0px;}
+ 			75%  {left:0px; top:0px;}
+  			100% {left:0px; top:0px;}
+		}
+
+		/* Standard syntax */
+		@keyframes move {
+ 			0%   {left:0px; top:0px;}
+  			25%  {left:200px; top:0px;}
+  			50%  {left:200px; top:0px;}
+  			75%  {left:0px; top:0px;}
+  			100% {left:0px; top:0px;}
 		}
 
 		.content {
